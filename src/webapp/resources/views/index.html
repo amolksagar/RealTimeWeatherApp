@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Real Time Weather</title>
+    <script src="/realTimeWeatherApp-1.0/resources/js/jquery-1.12.4.js"></script>
+    <link href="/realTimeWeatherApp-1.0/resources/js/bootstrap.min.css" rel="stylesheet">
+    <script src="/realTimeWeatherApp-1.0/resources/js/bootstrap.min.js"></script>
+    <script src="/realTimeWeatherApp-1.0/resources/js/index.js"></script>
+    <script src="/realTimeWeatherApp-1.0/resources/js/script.js"></script>
+    
+<style>
+.btn {
+  font-weight: bold;
+  border: 1px solid #900;
+}
+.header{
+  color: #900;
+  font-size: font-size: 300%;
+}
+.centered {
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+    height: 800px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="page-header">
+            <h4 class="header" align="center">Real Time Weather Application</h4>
+    </div>
+
+		<div align="center">
+            <form class="form-inline" id="search-form">
+                <div align="right" class="form-group">
+                    <select id="city" name="city"></select>
+                    <button type="submit" id="bth-search" class="btn">
+                   		 Get Weather Details
+                    </button>
+                </div>
+                <div id="error-field"></div>
+            </form>
+            </div>
+            
+   <div class="page-header">
+            <h4 class="header" align="center"></h4>
+    </div>
+
+    <div style="display: none" id="hide-area">
+    <div class="centered" id="weather-table">
+        <table class="table table-bordered">
+
+            <tbody>
+            <tr class="success">
+                <td><b>City</b></td>
+                <td>
+                    <div id="city-name"></div>
+                </td>
+            </tr>
+            <tr class="success">
+                <td><b>Updated Time</b></td>
+                <td>
+                    <div id="updated-time"></div>
+                </td>
+            </tr>
+           <tr class="success">
+                <td><b>Weather</b></td>
+                <td>
+                    <div id="weather"></div>
+                </td>
+            </tr>
+           <tr class="success">
+                <td><b>Temperature</b></td>
+                <td>
+                    <div id="temp"></div>
+                </td>
+            </tr>
+            <tr class="success">
+                <td><b>Wind</b></td>
+                <td>
+                    <div id="wind"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
