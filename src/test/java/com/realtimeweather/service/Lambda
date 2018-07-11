@@ -1,0 +1,35 @@
+package au.selfstudy.java8;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+interface Action<T, R> {
+    R execute(T t);
+ }
+
+public class Lambda {
+
+
+ public static void main(String[] args) {
+	 List<Integer> list = Arrays.asList(1,2,3,4);
+	 list.forEach(new Consumer<Integer>() {
+		 	@Override
+			public void accept(Integer t) {
+				System.out.println("forEach anonymous class Value::"+t);
+			}
+
+		});
+	 
+	 List<String> listStr = Arrays.asList("1","2","3","4");
+	 listStr.forEach(new Consumer<String>() {
+
+		@Override
+		public void accept(String t) {
+			System.out.println("Consuemr Value::"+t);
+		}
+		});
+	 
+ }
+
+}
